@@ -1,0 +1,30 @@
+{
+  "name": "netify",
+  "version": "1.0.0",
+  "description": "Lets you know wheter a movie is available to stream",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcmalinowski/netify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcmalinowski/netify/issues"
+  },
+  "homepage": "https://github.com/pcmalinowski/netify#readme"
+}
