@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/signin', (req, res) => {
+  res.sendFile(__dirname + '/public/signin.html');
+});
+
 let server;
 function runServer() {
   const port = process.env.PORT || 5000;
