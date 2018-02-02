@@ -32,4 +32,3 @@ describe('return 200', function(){
       res.should.have.status(200);
       res.should.be.html;
     });
-});
