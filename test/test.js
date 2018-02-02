@@ -33,4 +33,3 @@ describe('return 200', function(){
       res.should.be.html;
     });
 });
-    });
