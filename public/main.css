@@ -1,16 +1,10 @@
-@import "compass/css3";
-
 * {
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll; 
-}
-
 body {
   background: black;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: sans-serif;
 }
 
 a {

@@ -6,8 +6,24 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/search', (req, res) => {
+  res.sendFile(__dirname + '/public/search.html');
+});
+
+app.get('/results', (req, res) => {
+  res.sendFile(__dirname + '/public/results.html');
+});
+
+app.get('/settings', (req, res) => {
+  res.sendFile(__dirname + '/public/settings.html');
+});
+
 app.get('/signin', (req, res) => {
   res.sendFile(__dirname + '/public/signin.html');
+});
+
+app.get('/signup', (req, res) => {
+  res.sendFile(__dirname + '/public/signup.html');
 });
 
 let server;
