@@ -24,6 +24,7 @@ describe('return 200', function(){
       res.should.have.status(200);
       res.should.be.html;
     });
+  });
 
     it('will return 200', function() {
     return chai.request('http://localhost:5000')
@@ -32,3 +33,5 @@ describe('return 200', function(){
       res.should.have.status(200);
       res.should.be.html;
     });
+  });
+});
