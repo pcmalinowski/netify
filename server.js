@@ -8,6 +8,7 @@ app.get('/', (req, res) => {
 
 app.get('/search', (req, res) => {
   res.sendFile(__dirname + '/public/search.html');
+  console.log
 });
 
 app.get('/results', (req, res) => {
