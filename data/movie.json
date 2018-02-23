@@ -1,0 +1,32 @@
+{
+	"Movies": [
+		{
+	        "titleName": "Bad Movie",
+            "description": "Lorem ipsem doler doler lorem ipsum",
+            "source": "Netflix",
+            "year": "1990",
+            "id": "1111"
+		},
+		{
+	        "titleName": "Good Movie",
+            "description": "Lorem ipsem doler doler lorem ipsum",
+            "source": "Hulu",
+            "year": "2000",
+            "id": "2222"
+		},
+		{
+	        "titleName": "Better Movie",
+            "description": "Lorem ipsem doler doler lorem ipsum",
+            "source": "Amazon Prime",
+            "year": "2010",
+            "id": "3333"
+		},
+		{
+	        "titleName": "Best Movie",
+            "description": "Lorem ipsem doler doler lorem ipsum",
+            "source": "Unavailable",
+            "year": "2018",
+            "id": "4444"
+		},
+	]		
+}

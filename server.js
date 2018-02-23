@@ -1,31 +1,41 @@
 const express = require('express');
+var mongoose = require('mongoose'); //WHY AM I CRASHING THE APP?!?
+var configDB = require('./config/database.js');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var expressSession = require('express-session');
+var morgan = require('morgan');
+var nodemon = require('nodemon');
+var passport = require('passport');
+var port = process.env.PORT || 5000;
 const app = express();
+
+
 app.use(express.static('public'));
+// config to connect to local db
 
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
+mongoose.connect(configDB.url);
+// passport configurations for the db
 
-app.get('/search', (req, res) => {
-  res.sendFile(__dirname + '/public/search.html');
-  console.log
-});
+app.use(morgan('dev'));
+//logs reqeusts to console
 
-app.get('/results', (req, res) => {
-  res.sendFile(__dirname + '/public/results.html');
-});
+app.use(cookieParser());
+//reads cookies used for authentication
 
-app.get('/settings', (req, res) => {
-  res.sendFile(__dirname + '/public/settings.html');
-});
+app.use(bodyParser());
+//allows to read and get info from html forms
 
-app.get('/signin', (req, res) => {
-  res.sendFile(__dirname + '/public/signin.html');
-});
+// app.use(expressSession({
+//   secret: 'a4f8071f-c873-4447-8ee2',
+//     cookie: { maxAge: 2628000000 },
+//     store: new (require('express-sessions'))})); 
+//wooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+//look up how to create a session secret(JWT Auth)
 
-app.get('/signup', (req, res) => {
-  res.sendFile(__dirname + '/public/signup.html');
-});
+app.use(passport.initialize());
+
+app.use(passport.session());
 
 let server;
 function runServer() {
@@ -46,18 +56,6 @@ function runServer() {
 if (require.main === module) {
   runServer().catch(err => console.error(err));
 };
-
-function runServer() {
-  const port = process.env.PORT || 5000;
-  return new Promise((resolve, reject) => {
-    server = app.listen(port, () => {
-      console.log(`Your app is listening on port ${port}`);
-      resolve(server);
-    }).on('error', err => {
-      reject(err)
-    });
-  });
-}
 
 // like `runServer`, this function also needs to return a promise.
 // `server.close` does not return a promise on its own, so we manually
@@ -82,5 +80,9 @@ if (require.main === module) {
   runServer().catch(err => console.error(err));
 };
 
+
+//app.listen(port); //CALLING listen was causing crash!
+
+console.log('My app is starting' + port);
 
 module.exports = {app, runServer, closeServer};

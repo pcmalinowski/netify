@@ -5,6 +5,7 @@
 body {
   background: black;
   font-family: sans-serif;
+  color: white;
 }
 
 a {
@@ -16,7 +17,16 @@ a {
   }
 }
 
-.form {
+.form{
+  background: gray;
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+  border-radius: ;
+  box-shadow:0 4px 10px 4px;
+}
+
+.results {
   background: gray;
   padding: 40px;
   max-width:600px;

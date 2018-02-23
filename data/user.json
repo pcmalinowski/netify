@@ -1,0 +1,32 @@
+{
+	"users": [
+		{
+	"id": "1111",
+	"email": "pcmalinowski@gmail.com",
+	"password": "patrick",
+	"firstName": "Patrick",
+	"lastName": "Malinowski"
+		},
+		{
+	"id": "2222",
+	"email": "pcmalinowski@gmail.com",
+	"password": "patrick",
+	"firstName": "Patrick",
+	"lastName": "Malinowski"
+		},
+		{
+	"id": "3333",
+	"email": "pcmalinowski@gmail.com",
+	"password": "patrick",
+	"firstName": "Patrick",
+	"lastName": "Malinowski"
+		},
+		{
+	"id": "4444",
+	"email": "pcmalinowski@gmail.com",
+	"password": "patrick",
+	"firstName": "Patrick",
+	"lastName": "Malinowski"
+		}
+	]		
+}
