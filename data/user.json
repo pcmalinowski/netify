@@ -2,30 +2,30 @@
 	"users": [
 		{
 	"id": "1111",
-	"email": "pcmalinowski@gmail.com",
-	"password": "patrick",
-	"firstName": "Patrick",
+	"email": "pcmalinowski1@gmail.com",
+	"password": "patrick1",
+	"firstName": "One",
 	"lastName": "Malinowski"
 		},
 		{
 	"id": "2222",
-	"email": "pcmalinowski@gmail.com",
-	"password": "patrick",
-	"firstName": "Patrick",
+	"email": "pcmalinowski2@gmail.com",
+	"password": "patrick2",
+	"firstName": "Two",
 	"lastName": "Malinowski"
 		},
 		{
 	"id": "3333",
-	"email": "pcmalinowski@gmail.com",
-	"password": "patrick",
-	"firstName": "Patrick",
+	"email": "pcmalinowski3@gmail.com",
+	"password": "patrick3",
+	"firstName": "Three",
 	"lastName": "Malinowski"
 		},
 		{
 	"id": "4444",
-	"email": "pcmalinowski@gmail.com",
-	"password": "patrick",
-	"firstName": "Patrick",
+	"email": "pcmalinowski4@gmail.com",
+	"password": "patrick4",
+	"firstName": "Four",
 	"lastName": "Malinowski"
 		}
 	]		

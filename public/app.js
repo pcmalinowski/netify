@@ -10,38 +10,52 @@
 // 	}
 // }
 
-var MOVIE_RESULTS = {
-	"Movies": [
-        {
-            "titleName": "Bad Movie",
-            "description": "Lorem ipsem doler doler lorem ipsum",
-            "source": "Netflix",
-            "year": "1990",
-            "id": "1111"
-        },
-        {
-            "titleName": "Good Movie",
-            "description": "Lorem ipsem doler doler lorem ipsum",
-            "source": "Hulu",
-            "year": "2000",
-            "id": "2222"
-        },
-        {
-            "titleName": "Better Movie",
-            "description": "Lorem ipsem doler doler lorem ipsum",
-            "source": "Amazon Prime",
-            "year": "2010",
-            "id": "3333"
-        },
-        {
-            "titleName": "Best Movie",
-            "description": "Lorem ipsem doler doler lorem ipsum",
-            "source": "Unavailable",
-            "year": "2018",
-            "id": "4444"
+// var MOVIE_RESULTS = {
+// 	"Movies": [
+//         {
+//             "titleName": "Bad Movie",
+//             "description": "Lorem ipsem doler doler lorem ipsum",
+//             "source": "Netflix",
+//             "year": "1990",
+//             "id": "1111"
+//         },
+//         {
+//             "titleName": "Good Movie",
+//             "description": "Lorem ipsem doler doler lorem ipsum",
+//             "source": "Hulu",
+//             "year": "2000",
+//             "id": "2222"
+//         },
+//         {
+//             "titleName": "Better Movie",
+//             "description": "Lorem ipsem doler doler lorem ipsum",
+//             "source": "Amazon Prime",
+//             "year": "2010",
+//             "id": "3333"
+//         },
+//         {
+//             "titleName": "Best Movie",
+//             "description": "Lorem ipsem doler doler lorem ipsum",
+//             "source": "Unavailable",
+//             "year": "2018",
+//             "id": "4444"
+//         }
+//     ]
+// };
+
+const MongoClient = require(`mongodb`).MongoClient;
+const url = 'mongodb://127.0.0.1:27017/netify';
+
+MongoClient.connect(url, function(err, db) {
+    db.collection(`movies`).find().toArray(function(error, movies){
+        if(error){
+            console.error(error);
+            return;
         }
-    ]
-};
+        console.log(movies);
+    });
+});
+
 
 // this function's name and argument can stay the
 // same after we have a live API, but its internal

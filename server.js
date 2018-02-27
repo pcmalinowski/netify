@@ -1,13 +1,13 @@
 const express = require('express');
-var mongoose = require('mongoose'); //WHY AM I CRASHING THE APP?!?
-var configDB = require('./config/database.js');
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
-var expressSession = require('express-session');
-var morgan = require('morgan');
-var nodemon = require('nodemon');
-var passport = require('passport');
-var port = process.env.PORT || 5000;
+const mongoose = require('mongoose');
+const configDB = require('./config/database.js');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
+const morgan = require('morgan');
+const nodemon = require('nodemon');
+const passport = require('passport');
+const port = process.env.PORT || 5000;
 const app = express();
 
 
